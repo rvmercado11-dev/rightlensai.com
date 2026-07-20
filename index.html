@@ -1,338 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>RightLens AI | Practical AI Readiness & Governance</title>
-
-  <meta
-    name="description"
-    content="RightLens AI helps Philippine SMEs and organizations make AI use visible, accountable, safe, and measurable - one governed AI use case at a time."
-  />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RightLens AI | Better AI Decisions Before You Buy or Scale</title>
+  <meta name="description" content="RightLens AI helps Philippine organizations clarify what needs to improve, determine where AI genuinely belongs, and adopt AI with accountability, human oversight, data boundaries, and evidence of value.">
+  <meta name="theme-color" content="#0d282d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RightLens AI | Better AI Decisions Before You Buy or Scale">
+  <meta property="og:description" content="Start with one real AI decision. Clarify the problem, establish accountability and boundaries, and scale only with evidence.">
+  <meta property="og:url" content="https://rightlensai.com/">
+  <link rel="canonical" href="https://rightlensai.com/">
+  <link rel="icon" type="image/png" href="rightlens-ai-icon.png">
+  <link rel="apple-touch-icon" href="rightlens-ai-icon.png">
   <style>
-    :root {
-      --navy: #0b1f3a;
-      --blue: #1e5aa8;
-      --gold: #d9a441;
-      --text: #1f2933;
-      --muted: #5c6670;
-      --light: #f7f9fc;
-      --panel: #ffffff;
-      --border: #dde6f2;
-      --soft-blue: #eaf1fb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    a {
-      color: var(--blue);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 48px 22px 64px;
-    }
-
-    .hero {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 42px 34px;
-      box-shadow: 0 10px 30px rgba(11, 31, 58, 0.06);
-      border-top: 8px solid var(--gold);
-    }
-
-    .eyebrow {
-      color: var(--blue);
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      margin: 0;
-      color: var(--navy);
-      font-size: clamp(2.35rem, 6vw, 4.5rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-    }
-
-    .subtitle {
-      margin-top: 16px;
-      color: var(--text);
-      font-size: clamp(1.2rem, 3vw, 1.75rem);
-      font-weight: 800;
-      line-height: 1.3;
-    }
-
-    .positioning {
-      margin-top: 26px;
-      color: var(--navy);
-      font-size: clamp(1.15rem, 2.6vw, 1.45rem);
-      font-weight: 800;
-      line-height: 1.45;
-      max-width: 780px;
-    }
-
-    .section {
-      margin-top: 28px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 32px;
-    }
-
-    h2 {
-      margin: 0 0 16px;
-      color: var(--navy);
-      font-size: clamp(1.55rem, 4vw, 2.15rem);
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-    }
-
-    h3 {
-      margin: 24px 0 10px;
-      color: var(--navy);
-      font-size: 1.2rem;
-    }
-
-    p {
-      margin: 0 0 16px;
-    }
-
-    ul,
-    ol {
-      margin-top: 10px;
-      padding-left: 1.35rem;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .highlight {
-      background: var(--soft-blue);
-      border-left: 5px solid var(--gold);
-      border-radius: 16px;
-      padding: 22px;
-      margin: 22px 0;
-    }
-
-    .callout {
-      background: var(--navy);
-      color: #ffffff;
-      border-radius: 20px;
-      padding: 28px;
-      margin-top: 28px;
-    }
-
-    .callout h2 {
-      color: #ffffff;
-    }
-
-    .callout a {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    .contact-list {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 0;
-    }
-
-    .contact-list li {
-      margin-bottom: 10px;
-    }
-
-    .small {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .callout .small {
-      color: #d7e2f0;
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.92rem;
-      margin-top: 38px;
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        padding: 28px 16px 48px;
-      }
-
-      .hero,
-      .section {
-        padding: 26px 22px;
-        border-radius: 22px;
-      }
-
-      .callout {
-        padding: 24px 22px;
-      }
-    }
+    :root{--ink:#17343a;--muted:#5a6d70;--brand:#176c73;--dark:#0d4f55;--accent:#d9904a;--logo-blue:#3975f6;--logo-cyan:#28b8ef;--paper:#fbfcfa;--soft:#edf5f3;--line:#d8e4e1;--white:#fff;--shadow:0 18px 50px rgba(19,52,58,.08);--radius:22px;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;text-rendering:optimizeLegibility}a{color:inherit}.container{width:min(calc(100% - 2rem),var(--max));margin-inline:auto}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:var(--ink);color:#fff;padding:.7rem 1rem;z-index:100}
+    header{position:sticky;top:0;z-index:50;background:rgba(251,252,250,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(216,228,225,.9)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}.brand{display:inline-flex;align-items:center;gap:.72rem;text-decoration:none;font-weight:850;font-size:1.13rem;letter-spacing:-.025em}.brand img{width:42px;height:42px;object-fit:contain;display:block}.brand>span{color:var(--dark)}.brand span span{color:var(--logo-blue)}.links{display:flex;gap:1.15rem;align-items:center}.links a{text-decoration:none;color:var(--muted);font-size:.93rem;font-weight:700}.links a:hover,.links a:focus-visible{color:var(--logo-blue)}.menu{display:none}
+    main section{padding:5.5rem 0;scroll-margin-top:74px}.hero{padding:7.2rem 0 6rem;overflow:hidden;background:radial-gradient(circle at 86% 18%,rgba(40,184,239,.10),transparent 28%),radial-gradient(circle at 8% 92%,rgba(23,108,115,.07),transparent 30%),var(--paper)}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:4rem;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:.55rem;margin:0 0 1rem;color:var(--brand);font-size:.78rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:30px;height:2px;background:var(--accent)}h1,h2,h3{line-height:1.12;letter-spacing:-.035em;margin-top:0}h1{font-size:clamp(2.65rem,6vw,5.15rem);margin-bottom:1.4rem}h2{font-size:clamp(2rem,4vw,3.3rem);margin-bottom:1rem}h3{font-size:1.22rem}.lead{font-size:clamp(1.1rem,2vw,1.3rem);color:var(--muted);max-width:760px}.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.75rem 1.15rem;border-radius:999px;border:1px solid var(--dark);background:var(--dark);color:#fff;font-weight:780;text-decoration:none;transition:.2s}.button:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(13,79,85,.18)}.button.secondary{background:transparent;color:var(--dark)}.button.secondary:hover{background:var(--soft)}
+    .hero-card{position:relative;padding:2rem;border-radius:var(--radius);background:var(--ink);color:#fff;box-shadow:var(--shadow);overflow:hidden}.hero-card:after{content:"";position:absolute;width:150px;height:150px;right:-45px;top:-50px;border-radius:50%;border:28px solid rgba(217,144,74,.22)}.hero-mark{width:62px;box-shadow:0 0 0 6px rgba(40,184,239,.10),0 8px 24px rgba(8,43,148,.12);height:62px;object-fit:contain;background:#fff;border-radius:17px;padding:5px;margin-bottom:1.15rem}.hero-card p{position:relative;margin:0;font-size:1.31rem;font-weight:760;line-height:1.4}.hero-card small{display:block;margin-top:1rem;color:#c5d8d8;font-weight:650}.soft{background:var(--soft)}.section-head{max-width:800px;margin-bottom:2.5rem}.section-head p{color:var(--muted);font-size:1.08rem}.perspective-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem}.statement{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:820;line-height:1.2;letter-spacing:-.03em}.formula{margin-top:2.5rem;padding:2rem;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;background:#fff;box-shadow:var(--shadow)}.formula strong{display:block;color:var(--dark);font-size:clamp(1.35rem,2.5vw,2rem);line-height:1.25}.formula p{color:var(--muted);margin-bottom:0}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}.value-card{border-top:3px solid var(--brand);padding-top:1rem}.value-card p{color:var(--muted);margin-bottom:0}
+    .steps{counter-reset:step;list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1rem}.steps li{counter-increment:step;display:grid;grid-template-columns:56px 1fr;gap:1.1rem;padding:1.35rem;border:1px solid var(--line);border-radius:18px;background:#fff}.steps li:before{content:counter(step);display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--dark);color:#fff;font-weight:850}.steps strong{display:block;margin-bottom:.2rem;font-size:1.08rem}.steps span{color:var(--muted)}.work-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem}.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.principle{padding:1.4rem;border:1px solid var(--line);border-radius:18px;background:#fff}.principle:last-child{grid-column:1/-1}.principle h3{margin-bottom:.45rem}.principle p{margin:0;color:var(--muted)}.audience{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:3rem;background:var(--ink);color:#fff;border-radius:var(--radius)}.audience h2{margin-bottom:0}.audience p{color:#ccdcdd}.founder-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:4rem}.credentials{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;list-style:none}.credentials li{padding:.55rem .8rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;color:var(--dark);font-weight:720;font-size:.9rem}.contact{text-align:center}.contact .lead{margin-inline:auto}footer{padding:2rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:1rem}.footer-brand{display:flex;align-items:center;gap:.5rem;font-weight:760}.footer-brand img{width:28px;height:28px}.footer-row a{color:var(--dark);font-weight:700}
+    a:focus-visible,button:focus-visible{outline:3px solid rgba(57,117,246,.45);outline-offset:3px}@media(max-width:860px){.menu{display:inline-flex;padding:.55rem .75rem;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font:inherit;font-weight:700}.nav{flex-wrap:wrap;padding:.7rem 0}.links{display:none;width:100%;flex-direction:column;align-items:flex-start;padding:.5rem 0 1rem}.links.open{display:flex}.hero-grid,.perspective-grid,.work-grid,.founder-grid,.audience{grid-template-columns:1fr;gap:2rem}.value-grid,.principles{grid-template-columns:1fr}.principle:last-child{grid-column:auto}.hero{padding-top:5rem}}@media(max-width:560px){main section{padding:4rem 0}.hero{padding:4.7rem 0 4rem}.steps li{grid-template-columns:44px 1fr;padding:1rem}.steps li:before{width:40px;height:40px}.audience{padding:2rem 1.35rem}.footer-row{align-items:flex-start;flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important}}
   </style>
 </head>
-
 <body>
-  <main class="page">
-    <section class="hero">
-      <div class="eyebrow">RightLens AI</div>
-
-      <h1>Practical AI Readiness & Governance</h1>
-
-      <div class="subtitle">
-        For Philippine SMEs and organizations adopting AI responsibly.
-      </div>
-
-      <p class="positioning">
-        We help Philippine SMEs and organizations make AI use visible, accountable, safe, and measurable - one governed AI use case at a time.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>What We Do</h2>
-
-      <p>
-        RightLens AI helps organizations adopt AI with clarity, confidence, and control.
-      </p>
-
-      <p>
-        We focus on practical AI readiness: clear use cases, accountable owners, data boundaries, human review, risk controls, evidence of value, and responsible scaling.
-      </p>
-
-      <p>
-        Our work helps teams become AI-legible and governable through minimal, practical, auditable controls aligned with emerging Responsible AI expectations.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Current Focus</h2>
-
-      <div class="highlight">
-        <h3>From Digital Safety to AI Readiness</h3>
-
-        <p>
-          Digital safety is part of a larger trust challenge for organizations adopting AI, automation, and digital platforms.
-        </p>
-
-        <p>
-          In that sense, digital safety is a shared responsibility - and AI readiness is one practical way organizations can operationalize it.
-        </p>
-
-        <p>
-          For Philippine SMEs and organizations, this means AI adoption should not only be fast or convenient. It should also be visible, accountable, safe, human-reviewed, and measurable.
-        </p>
-      </div>
-
-      <p>
-        RightLens AI helps translate digital safety into practical AI readiness by helping organizations answer seven management questions before scaling AI:
-      </p>
-
-      <ol>
-        <li>What AI use case are we using?</li>
-        <li>Who is accountable for the output?</li>
-        <li>What data does the AI access?</li>
-        <li>What data is off-limits?</li>
-        <li>Where is human review required?</li>
-        <li>What could go wrong, and how would we respond?</li>
-        <li>How will we measure value and trust after 30 days?</li>
-      </ol>
-    </section>
-
-    <section class="section">
-      <h2>Who This Is For</h2>
-
-      <p>
-        RightLens AI is for business owners, executives, managers, associations, and teams who are starting to use AI tools and want to avoid unclear ownership, unsafe data use, weak oversight, or unproven value.
-      </p>
-
-      <p>
-        We are especially focused on Philippine SMEs and organizations that want practical AI adoption - not abstract governance.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Practical Starting Point</h2>
-
-      <p>
-        Start with one visible AI use case.
-      </p>
-
-      <p>
-        Before scaling AI, clarify:
-      </p>
-
-      <ul>
-        <li>the business purpose</li>
-        <li>the accountable human owner</li>
-        <li>the data allowed and off-limits</li>
-        <li>the review and approval rules</li>
-        <li>the risks and response path</li>
-        <li>the 30-day value and trust measures</li>
-      </ul>
-
-      <p>
-        This is minimum viable AI governance in action.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Founder</h2>
-
-      <p>
-        <strong>Rico Mercado</strong> is the Founder of RightLens AI and an AI Governance Partner focused on helping organizations adopt AI responsibly, practically, and with measurable value.
-      </p>
-
-      <p>
-        His work connects AI readiness, governance, project leadership, data boundaries, human oversight, and operational trust.
-      </p>
-    </section>
-
-    <section class="callout">
-      <h2>Contact</h2>
-
-      <p>
-        For conversations, collaborations, or practical AI readiness discussions:
-      </p>
-
-      <ul class="contact-list">
-        <li>Email: <a href="mailto:hello@rightlensai.com">hello@rightlensai.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/ricovm">linkedin.com/in/ricovm</a></li>
-      </ul>
-
-      <p class="small">
-        If we met at an event, feel free to mention where we met and what topic we discussed. Thank you.
-      </p>
-    </section>
-
-    <footer>
-      © 2026 RightLens AI
-    </footer>
-  </main>
-</body>
-</html>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="container nav"><a class="brand" href="#top" aria-label="RightLens AI home"><img src="rightlens-ai-icon.png" alt=""><span>RightLens <span>AI</span></span></a><button class="menu" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button><nav class="links" id="primary-nav" aria-label="Primary navigation"><a href="#perspective">Perspective</a><a href="#starting-point">Starting point</a><a href="#work">How we help</a><a href="#for">Who it is for</a><a href="#founder">Founder</a><a href="#contact">Contact</a></nav></div></header>
+<main id="main">
+<section class="hero" id="top"><div class="container hero-grid"><div><p class="eyebrow">Practical, human-centered AI advisory</p><h1>Before you buy or scale AI, ask what really needs to improve.</h1><p class="lead">RightLens AI helps Philippine organizations improve how work gets done with AI - without losing accountability, human judgment or trust.</p><div class="actions"><a class="button" href="#starting-point">Start with one AI decision</a><a class="button secondary" href="#contact">Discuss an AI decision</a></div></div><aside class="hero-card" aria-label="RightLens AI core principle"><img class="hero-mark" src="rightlens-ai-icon.png" alt="RightLens AI lens and connected-nodes mark"><p>Understand before buying. Improve the work before automating it. Keep people capable and accountable. Scale only with evidence.</p><small>RightLens AI</small></aside></div></section>
+<section class="soft" id="perspective"><div class="container"><div class="perspective-grid"><div><p class="eyebrow">Perspective</p><p class="statement">A system can go live without the organization becoming better.</p></div><div><p>Technology creates lasting value only when the work, information, decisions, controls and human responsibilities around it operate together. That lesson from enterprise technology remains highly relevant in the age of AI.</p><p>Begin with the problem, the outcome that matters and how the work gets done from beginning to end. Then decide whether AI belongs in the solution - or whether the organization first needs better data, clearer ownership or a simpler process.</p></div></div><div class="formula"><strong>AI Value = Business Improvement + Risk Control + Human Confidence</strong><p>This is not arithmetic. It is a practical management test: sustainable AI value requires credible evidence across all three dimensions.</p></div><div class="value-grid"><article class="value-card"><h3>Business Improvement</h3><p>The complete way of working produces a meaningful net improvement - not merely more output or a faster isolated task.</p></article><article class="value-card"><h3>Risk Control</h3><p>Ownership, data boundaries, human review, correction and escalation are clear and proportionate to the use.</p></article><article class="value-card"><h3>Human Confidence</h3><p>People understand AI's role, retain essential judgment and can question, correct or stop an outcome when needed.</p></article></div></div></section>
+<section id="starting-point"><div class="container"><div class="section-head"><p class="eyebrow">Practical starting point</p><h2>Start with one real AI decision.</h2><p>Before buying or scaling AI, make one important use case clear enough to evaluate, govern and measure.</p></div><ol class="steps"><li><div><strong>Clarify what needs to improve.</strong><span>Define the problem, the desired outcome and how the work currently gets done.</span></div></li><li><div><strong>Decide whether AI genuinely belongs.</strong><span>Consider whether the better answer is AI - or better data, clearer ownership or a simpler process.</span></div></li><li><div><strong>Make accountability and boundaries clear.</strong><span>Name the human owner and define what information the AI may and may not use.</span></div></li><li><div><strong>Keep people capable of reviewing and correcting.</strong><span>Specify what AI may do, what must remain human and when someone can question, correct or stop an outcome.</span></div></li><li><div><strong>Test and measure before scaling.</strong><span>Run a bounded pilot and evaluate business improvement, risk control and human confidence.</span></div></li></ol><div class="actions"><a class="button" href="#contact">Discuss an AI decision</a></div></div></section>
+<section class="soft" id="work"><div class="container work-grid"><div><p class="eyebrow">How we help</p><h2>Better decisions before buying, deploying or scaling AI.</h2><p class="lead">The starting point is one important problem or area of work - not a collection of tools.</p></div><div class="principles"><article class="principle"><h3>Understand before buying.</h3><p>Clarify the problem, desired outcome and current way of working.</p></article><article class="principle"><h3>Improve before automating.</h3><p>Remove unnecessary steps and decide whether AI is genuinely appropriate.</p></article><article class="principle"><h3>Keep people capable and accountable.</h3><p>Define what AI may do, what must remain human and who owns the result.</p></article><article class="principle"><h3>Make AI use governable.</h3><p>Establish clear data boundaries, review points, correction paths and evidence.</p></article><article class="principle"><h3>Scale only with evidence.</h3><p>Measure business improvement, risk control and human confidence before expanding the use.</p></article></div></div></section>
+<section id="for"><div class="container"><div class="audience"><div><p class="eyebrow" style="color:#8dd1d0">Who this is for</p><h2>For leaders who need clarity before committing more time, money or trust to AI.</h2></div><div><p>This perspective is especially relevant when an organization is considering an AI tool, pilot or agent - or when AI use is already expanding without sufficiently clear ownership, boundaries, oversight or evidence of value.</p><p>We also welcome conversations with associations, practitioners and collaborators working toward practical, responsible AI adoption in the Philippines.</p></div></div></div></section>
+<section class="soft" id="founder"><div class="container founder-grid"><div><p class="eyebrow">Founder</p><h2>Rico Mercado</h2><p class="lead">AI Governance Partner</p></div><div><p>Rico brings more than 20 years of APAC experience in IT leadership, enterprise applications, SAP and project governance. Today, he applies that experience to responsible AI adoption - connecting business outcomes, accountable ownership, data boundaries, human oversight, workforce capability and evidence of value.</p><ul class="credentials" aria-label="Credentials"><li>PMP</li><li>AWS Certified AI Practitioner</li><li>AIM-Emeritus Postgraduate Diploma in General Management</li><li>BS Computer Science, UPLB</li></ul><div class="actions"><a class="button secondary" href="https://ricomercado.co/" target="_blank" rel="noopener noreferrer">Visit RicoMercado.co</a><a class="button secondary" href="https://www.linkedin.com/in/ricovm" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></div></div></div></section>
+<section id="contact"><div class="container contact"><p class="eyebrow">Contact</p><h2>Bring one real AI decision.</h2><p class="lead">If you are deciding whether to buy, pilot, expand, redesign, restrict or stop an AI use, start with the problem and the outcome that matters.</p><div class="actions" style="justify-content:center"><a class="button" href="mailto:hello@rightlensai.com?subject=Discuss%20an%20AI%20decision">Discuss an AI decision</a><a class="button secondary" href="https://www.linkedin.com/in/ricovm" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></section>
+</main>
+<footer><div class="container footer-row"><span class="footer-brand"><img src="rightlens-ai-icon.png" alt="">© 2026 RightLens AI</span><span><a href="mailto:hello@rightlensai.com">hello@rightlensai.com</a> · Practical AI decisions for Philippine organizations</span></div></footer>
+<script>const b=document.querySelector('.menu'),n=document.querySelector('.links');b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o))});n.addEventListener('click',e=>{if(e.target.matches('a')){n.classList.remove('open');b.setAttribute('aria-expanded','false')}})</script>
+</body></html>
