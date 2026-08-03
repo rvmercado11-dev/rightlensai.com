@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">RightLens AI symbol</title>
+<desc id="desc">A blue magnifying glass containing a three-node connected symbol.</desc>
+<defs>
+  <linearGradient id="lensStroke" x1="90" y1="60" x2="420" y2="450" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#3E5CB7"/>
+    <stop offset="0.52" stop-color="#3F6DCE"/>
+    <stop offset="1" stop-color="#4C58B7"/>
+  </linearGradient>
+  <linearGradient id="handleFill" x1="105" y1="420" x2="255" y2="270" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#4A54B5"/>
+    <stop offset="1" stop-color="#3F6DCE"/>
+  </linearGradient>
+  <linearGradient id="nodesFill" x1="205" y1="260" x2="330" y2="145" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#405FC1"/>
+    <stop offset="1" stop-color="#4773CF"/>
+  </linearGradient>
+</defs>
+<!-- handle sits behind the circular lens -->
+<path d="M174 326 L91 409 C72 428 72 458 91 477 C110 496 140 496 159 477 L242 394 Z" fill="url(#handleFill)"/>
+<!-- lens -->
+<circle cx="282" cy="224" r="166" fill="#D7D7D3" stroke="url(#lensStroke)" stroke-width="44"/>
+<!-- subtle inner highlight preserves the original dimensional character without blur -->
+<circle cx="282" cy="224" r="139" fill="none" stroke="#EEF0EE" stroke-opacity=".38" stroke-width="8"/>
+<!-- connected share symbol -->
+<path d="M252 224 L317 169 M252 224 L317 279" fill="none" stroke="url(#nodesFill)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="235" cy="224" r="39" fill="url(#nodesFill)"/>
+<circle cx="330" cy="158" r="34" fill="url(#nodesFill)"/>
+<circle cx="330" cy="290" r="34" fill="url(#nodesFill)"/>
+</svg>
