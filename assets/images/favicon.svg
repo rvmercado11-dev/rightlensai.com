@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="RightLens AI icon"><defs><linearGradient id="g" x1="80" y1="60" x2="430" y2="470" gradientUnits="userSpaceOnUse"><stop stop-color="#3E5CB7"/><stop offset=".55" stop-color="#3F6DCE"/><stop offset="1" stop-color="#4C58B7"/></linearGradient></defs><path d="M174 326 L91 409 C72 428 72 458 91 477 C110 496 140 496 159 477 L242 394 Z" fill="url(#g)"/><circle cx="282" cy="224" r="166" fill="#D7D7D3" stroke="url(#g)" stroke-width="48"/><path d="M252 224 L317 169 M252 224 L317 279" fill="none" stroke="#4267C8" stroke-width="34" stroke-linecap="round"/><circle cx="235" cy="224" r="40" fill="#4267C8"/><circle cx="330" cy="158" r="36" fill="#4267C8"/><circle cx="330" cy="290" r="36" fill="#4267C8"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="RightLens AI icon">
+<defs><linearGradient id="g" x1="85" y1="55" x2="430" y2="470" gradientUnits="userSpaceOnUse"><stop stop-color="#83C5D2"/><stop offset=".58" stop-color="#5E86F7"/><stop offset="1" stop-color="#6074DB"/></linearGradient></defs>
+<path d="M174 326 L91 409 C72 428 72 458 91 477 C110 496 140 496 159 477 L242 394 Z" fill="url(#g)"/>
+<circle cx="282" cy="224" r="166" fill="#DCE7E5" stroke="url(#g)" stroke-width="48"/>
+<path d="M252 224 L317 169 M252 224 L317 279" fill="none" stroke="#5E86F7" stroke-width="35" stroke-linecap="round"/>
+<circle cx="235" cy="224" r="41" fill="#6B8EFF"/><circle cx="330" cy="158" r="36" fill="#5E86F7"/><circle cx="330" cy="290" r="36" fill="#5E86F7"/>
+</svg>
